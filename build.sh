@@ -3,7 +3,7 @@
 filepath="rook-ceph"
 
 # 格式转换
-dos2unix $filepath
+# sed -i 's/^M//' $filename 
 
 # 遍历推送
 for imagepath in $(cat ./$filepath)
