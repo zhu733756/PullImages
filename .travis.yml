@@ -3,23 +3,8 @@ language: bash
 services:
   - docker
 
-env:
-  global:
-    #change the registry name and username/password to yourself's.
-    - DOCKER_HUB=zhu733756
-
 before_script:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 script:
-  - echo "start pull and retag and push"
-  - |
-    for image in $(cat rook-ceph.txt)
-    do
-    	image_name=${image##*/}
-    	docker pull $image
-    	docker tag $image $DOCKER_HUB/$image_name
-    	
-    	# push到dockerhub
-    	docker push $DOCKER_HUB/$image_name
-    done
+  - bash build.sh
