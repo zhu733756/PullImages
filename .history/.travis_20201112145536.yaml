@@ -1,0 +1,15 @@
+language: bash
+
+services:
+  - docker
+
+env:
+  global:
+    #change the registry name and username/password to yourself's.
+    - DOCKER_HUB=zhu733756
+
+before_script:
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+script:
+  
