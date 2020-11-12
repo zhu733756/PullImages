@@ -18,6 +18,6 @@ docker tag $imagepath registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
 docker push registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
 
 # push到dockerhub
-docker tag $imagepath willdockerhub/$imagename
-docker push willdockerhub/$imagename
+# docker tag $imagepath willdockerhub/$imagename
+# docker push willdockerhub/$imagename
 done
