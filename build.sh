@@ -1,6 +1,6 @@
 #!/bin/bash
 # 先添加镜像文件，然后给定文件名称
-filepath="rook-ceph"
+filepath="nvcr"
 
 # 格式转换
 # sed -i 's/^M//' $filename 
