@@ -1,6 +1,6 @@
 #!/bin/bash
 # 先添加镜像文件，然后给定文件名称
-filepath="nvcr"
+filepath="projects/kubeflow-v1.2"
 
 # 格式转换
 # sed -i 's/^M//' $filename 
@@ -8,10 +8,12 @@ filepath="nvcr"
 # 遍历推送
 for imagepath in $(cat ./$filepath)
 do
-imagename=$(echo $imagepath | awk -F '/' '{print $NF}')
+myimagepath=$(echo $imagepath | sed 's/gcr.io/zhu733756/')
 docker pull $imagepath
 
 # push到dockerhub
-docker tag $imagepath zhu733756/$imagename
-docker push zhu733756/$imagename
+docker tag $imagepath $myimagepath
+echo "tag to $myimagepath"
+docker push $imagename
+echo "start to push $myimagepath"
 done
