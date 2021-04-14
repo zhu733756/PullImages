@@ -8,7 +8,7 @@ filepath="projects/kubeflow-v1.2"
 # 遍历推送
 for imagepath in $(cat ./$filepath)
 do
-myimagepath=$(echo $imagepath | sed 's/gcr.io/zhu733756/')
+myimagepath=$(echo $imagepath | awk -F '/' '{print $NF}')
 docker pull $imagepath
 
 # push到dockerhub
