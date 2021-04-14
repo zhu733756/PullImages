@@ -14,6 +14,6 @@ docker pull $imagepath
 # push到dockerhub
 docker tag $imagepath $myimagepath
 echo "tag to $myimagepath"
-docker push $imagename
+docker push "$myimagepath"
 echo "start to push $myimagepath"
 done
