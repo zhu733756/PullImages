@@ -12,8 +12,8 @@ myimagepath=$(echo $imagepath | awk -F '/' '{print $NF}')
 docker pull $imagepath
 
 # push到dockerhub
-docker tag $imagepath $myimagepath
+docker tag $imagepath zhu733756/$myimagepath
 echo "tag to $myimagepath"
-docker push "$myimagepath"
+docker push "zhu733756/$myimagepath"
 echo "start to push $myimagepath"
 done
