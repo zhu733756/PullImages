@@ -1,0 +1,10 @@
+k8s.gcr.io/nfd/node-feature-discovery:v0.8.2 kubespheredev/node-feature-discovery:v0.8.2
+nvcr.io/nvidia/cloud-native/k8s-driver-manager:v0.1.0 kubespheredev/k8s-driver-manager:v0.1.0
+nvcr.io/nvidia/gpu-feature-discovery:v0.4.1  kubespheredev/gpu-feature-discovery:v0.4.1
+nvcr.io/nvidia/cloud-native/gpu-operator-validator:v1.8.0  kubespheredev/gpu-operator-validator:v1.8.0
+nvcr.io/nvidia/k8s/container-toolkit:1.6.0-ubuntu18.04 kubespheredev/container-toolkit:1.6.0-ubuntu18.04
+nvcr.io/nvidia/cloud-native/dcgm:2.2.3-ubuntu20.04
+nvcr.io/nvidia/k8s/dcgm-exporter:2.2.9-2.4.0-ubuntu20.04
+nvcr.io/nvidia/k8s-device-plugin:v0.9.0-ubi8
+nvcr.io/nvidia/driver:455.23.05-ubuntu18.04
+nvcr.io/nvidia/cloud-native/k8s-mig-manager:v0.1.2-ubuntu20.04
